@@ -329,16 +329,28 @@ img { pointer-events: none; }
   text-decoration: none;
   border-radius: 1rem;
 }
-.socials{
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  right: 0;
-  margin-right: 50px;
+.socials {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+    gap: 20px; /* Расстояние между столбцами */
 }
-.socials a img{
-  height: 42px;
-  margin-bottom: 12px;
+
+.socials .column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Выравнивание элементов в каждом столбце */
+}
+
+.socials a img {
+    height: 42px;
+    margin-bottom: 12px;
+}
+
+.socials .column a:last-child img {
+    margin-bottom: 0; /* Убираем нижний отступ для последней иконки в столбце */
 }
 
 .hero-area img{
